@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cyberpunk Terminal Interface - Responsive Security Simulation Showcase">
+  <title>CYBER_ALERT // SYSTEM BREACH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Canvas Background -->
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <!-- CRT Monitor Overlay Effects -->
+  <div class="crt-scanlines" aria-hidden="true"></div>
+  <div class="crt-vignette" aria-hidden="true"></div>
+
+  <!-- Main Container -->
+  <main class="cyber-container">
+    <!-- Top System Header Bar -->
+    <header class="cyber-header">
+      <div class="status-indicator">
+        <span class="pulse-dot"></span>
+        <span class="status-label">STATUS: CRITICAL BREACH</span>
+      </div>
+      <div class="system-telemetry">
+        <span class="telemetry-item" id="node-id">NODE: 0x7F_SEC_ERR</span>
+        <span class="telemetry-item" id="clock-display">00:00:00 UTC</span>
+      </div>
+    </header>
+
+    <!-- Centerpiece Alert Card -->
+    <section class="alert-card" role="region" aria-label="System Alert Warning">
+      <div class="card-corner top-left"></div>
+      <div class="card-corner top-right"></div>
+      <div class="card-corner bottom-left"></div>
+      <div class="card-corner bottom-right"></div>
+
+      <div class="hazard-strip">
+        <span>SECURITY COMPROMISED</span>
+        <span>///</span>
+        <span>UNAUTHORIZED ACCESS</span>
+        <span>///</span>
+        <span>SECURITY COMPROMISED</span>
+      </div>
+
+      <div class="alert-icon-wrapper" aria-hidden="true">
+        <svg class="alert-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+          <line x1="12" y1="9" x2="12" y2="13"></line>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </div>
+
+      <!-- Main Headline with Glitch Effect -->
+      <h1 class="glitch-title" data-text="YOUR SYSTEM IS HACKED">YOUR SYSTEM IS HACKED</h1>
+
+      <p class="subtitle">
+        Root privilege escalation confirmed. Kernel memory override in progress.
+      </p>
+
+      <!-- System Diagnostic Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-name">FIREWALL INTEGRITY</span>
+          <div class="stat-bar-track">
+            <div class="stat-bar-fill progress-red" style="width: 4%;"></div>
+          </div>
+          <span class="stat-value text-red">FAILED (4%)</span>
+        </div>
+
+        <div class="stat-box">
+          <span class="stat-name">CORE ENCRYPTION</span>
+          <div class="stat-bar-track">
+            <div class="stat-bar-fill progress-cyan" id="encryption-bar" style="width: 86%;"></div>
+          </div>
+          <span class="stat-value text-cyan" id="encryption-val">86% OVERRIDDEN</span>
+        </div>
+
+        <div class="stat-box">
+          <span class="stat-name">TRACE EVASION</span>
+          <div class="stat-bar-track">
+            <div class="stat-bar-fill progress-amber" style="width: 98%;"></div>
+          </div>
+          <span class="stat-value text-amber">98.2% PROXIED</span>
+        </div>
+      </div>
+
+      <!-- Live Terminal Console Stream -->
+      <div class="terminal-feed" id="terminal-feed" aria-live="polite">
+        <div class="terminal-line"><span class="t-prompt">[KERN_ALERT]</span> Initializing backdoor handshake on port 443...</div>
+        <div class="terminal-line"><span class="t-success">[EXPLOIT_OK]</span> Signature bypassed. Daemon hooked into pid #4829.</div>
+        <div class="terminal-line"><span class="t-warn">[DATA_STREAM]</span> Memory dump synchronized with remote relay.</div>
+      </div>
+
+      <!-- Action & Interaction Controls -->
+      <div class="action-row">
+        <button type="button" class="cyber-btn cyber-btn-primary" id="reboot-btn">
+          <span class="btn-glitch"></span>
+          <span class="btn-text">FORCE PURGE CORE</span>
+        </button>
+        <button type="button" class="cyber-btn cyber-btn-secondary" id="sound-btn">
+          <span class="btn-text" id="sound-label">AUDIO: OFF</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer Security Notice -->
+    <footer class="cyber-footer">
+      <span>SEC_ID: 9482-XA // SIMULATION UI // CYBERNETIC ENGINE</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
